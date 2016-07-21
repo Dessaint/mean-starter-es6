@@ -1,0 +1,24 @@
+<table class='table table-bordered'>
+                
+	          <tr>
+	            <th>Nom</th>
+	            <th>Téléphone</th>
+	            <th>Actions</th>
+	          </tr>
+	          <tr ng-repeat='contact in vm.telos'>
+	            <td>{{contact.nom}}</td>
+	            <td>{{contact.telephone}}</td> 
+	            <td><button class='btn btn-danger' ng-click='vm.delete(contact._id)'>Supprimer</button></td>
+	          </tr>
+	            <tr>
+			        <td>
+			            <input ng-model='vm.new.nom' placeholder="Nom...">
+			        </td>
+			        <td>
+			            <input ng-model='vm.new.telephone' placeholder="Numéro...">
+			        </td>
+			        <td>
+			            <button ng-click='vm.create()' class='btn btn-default'>Ajouter</button>
+			        </td>
+			  </tr>           
+</table> 
